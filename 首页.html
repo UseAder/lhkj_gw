@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="index.css">
+        <title>首页</title>
+        <style>
+
+         .black_overlay{ 
+            display: none; 
+            position: fixed; 
+            top: 0%; 
+            left: 0%; 
+            width: 100%; 
+            height: 100%; 
+            
+            background:rgba(0, 0, 0, 0.8); 
+            z-index:1001; 
+        } 
+        .white_content { 
+            position: absolute; 
+            top: 12vh;           
+            width: 100%; 
+            height: 100%; 
+            z-index:1002; 
+        } 
+        .dialog-box-warp{
+            width: 480px;
+            height: 541px;
+            padding: 50px; 
+            margin: auto auto;
+            box-sizing: border-box;
+            background: #FFFFFF;
+            border-radius: 5px;
+            position: relative;
+        }
+        .dialog-box-warp .login_hidden{
+            cursor: pointer;
+            width: 16px;height: 16px;  
+            right: 21px;
+            top: 22px;
+            position: absolute
+        }
+        .box-warp-title{
+            margin-bottom: 27px;
+        }
+        .box-warp-title .box-warp-title-left{
+            font-size: 30px;
+            color: #000000;
+        }
+        .box-warp-title .box-warp-title-right{
+            font-size: 20px;
+        }
+        .box-warp-title .box-warp-title-right a{
+            color: #4775FF
+        }
+        .warp-login-input{
+            width:380px;height: 50px;
+            border: 1px solid #E4E7EF;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 22px;
+        }
+        .warp-login-input input{
+            border: 0;
+            box-sizing: border-box;
+            padding: 0 10px;
+            width: 100%;
+            height: 100%;
+        }
+        .warp-login-button{
+            border: none;   
+            margin-top: 42px;  
+        }
+        .warp-login-button button{
+
+            cursor: pointer;
+            border-radius: 4px;
+            border: 0;
+            width: 100%;
+            height: 100%;
+            background: #4775FF;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+        </style>
+
+        
+    </head>
+
+    <body>
+        <div class="header-weiy-color" style="min-height:71px">
+
+           <!-- 弹框  样式在首页-->
+            <div  id="light" class="black_overlay"> 
+                <div class="white_content">
+                    <div class="dialog-box-warp">
+                        <div class="login_hidden" onclick = "closeDialog()">
+                            <img src="image/login_hidden.png" alt="" srcset="">
+                        </div>
+                        <div  class="box-warp-title J-flex">
+                            <div class="box-warp-title-left">
+                                    申请试用
+                            </div>
+                            <div class="box-warp-title-right">
+                                已有账号，<a href="#">直接登录</a>
+                            </div>     
+                        </div>
+                        <div class="box-warp-login">
+                            <div class="warp-login-input">
+                                <input type="text" placeholder="请输入手机号码">
+                            </div>
+                            <div class="warp-login-input">
+                                <input type="text" placeholder="请输入联系人姓名">
+                            </div>
+                            <div class="warp-login-input">
+                                <input type="text" placeholder="请输入公司名称">
+                            </div>
+                            <div class="warp-login-input">
+                                <input type="text" placeholder="请选择使用用途">
+                            </div>
+                            <div class="warp-login-input warp-login-button">
+                                <button>立即申请</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div> 
+            
+            <div class="header " >
+                <header id="main-header">
+                    <div class="head-logo">
+                    </div>
+                    <div class="head-nav left">
+                        <ul class="left">
+                            <li>
+                                <a href="javascript:void(0)">首页</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">三方物流系统</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">专线物流系统</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">服务支持</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">关于我们</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">移动端</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="head-login-register"> 
+                        <div class="head-login-left">
+                            <a href="javascript:void(0)" class="login-zxbao">专线登陆</a>
+                            <span></span>
+                            <a href="javascript:void(0)" class="login-sanfang">三方登录</a>
+                        </div>
+                        <div class="head-register-right">
+                            <a href="javascript:void(0)" class="register-lhk" onclick = "openDialog()">申请试用</a>
+                        </div>
+                    </div>
+                </header>
+            </div>
+        </div>
+        
+        <div class="banner">
+            <div class="banner-xian">
+            </div>
+            <ul class="banner_img hiSlider cursor-pointer">
+                <li data-title="1" class="hiSlider-item">
+                    <img src="image/banner2.png" alt="">
+                </li>
+                <li data-title="2" class="hiSlider-item">
+                    <img src="image/banner1.png ">
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="re-mid-content">
+                <div class="content-header ">
+                    <div class="content-title">
+                        产品
+                    </div>
+                </div>
+                <div class="item-list">
+                    <ul class="item-home-cp">
+                        <li>
+                            <div class="home-cp-logo">
+                                <img src="image/product01.png" alt="">
+                            </div>
+                            <div class="home-cp-body">
+                                <div class="home-cp-title">专线物流管理系统</div>
+                                <div class="home-cp-jiantou">
+                                    <img src="image/home_cp_lan.png" alt="">
+                                </div>
+                                <div class="home-cp-centent">单网点，多网点支持，扩张随心所欲</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="home-cp-logo">
+                                <img src="image/product01.png" alt="">
+                            </div>
+                            <div class="home-cp-body">
+                                <div class="home-cp-title">三方物流管理系统</div>
+                                <div class="home-cp-jiantou">
+                                    <img src="image/home_cp_hui.png" alt="">
+                                </div>
+                                <div class="home-cp-centent">客服分区服务，驻厂移动办公，全流程管控</div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="home-cp-logo">
+                                <img src="image/product01.png" alt="">
+                            </div>
+                            <div class="home-cp-body">
+                                <div class="home-cp-title">物流移动端</div>
+                                <div class="home-cp-jiantou">
+                                    <img src="image/home_cp_hui.png" alt="">
+                                </div>
+                                <div class="home-cp-centent">移动，尽在掌控</div>
+                            </div>
+                        </li>
+                    
+                    </ul>
+
+                </div>
+            </div>
+            <div class="re-mid-content">
+                <div class="content-header ">
+                    <div class="content-title">
+                        服务
+                    </div>
+                </div>
+                <div class="item-list">
+                    <ul class="item-home-fw">
+                        <li>
+                            <div class="home-fw-logo">
+                                <img src="image/home-jishu.png" alt="">
+                            </div>
+                            <div class="home-fw-title">技术</div>
+                            <div class="home-fw-xian"></div>
+                            <div class="home-fw-centent">1. 安全：与阿里云合作，采用顶尖的云存储技术、云安全防护技术，严格的数据加密，确保了数据安全。
+                                    2.便捷：基于Saas平台，零安装，只要打开浏览器，一切就这么简单</div>
+                        </li>
+                        <li>
+                            <div class="home-fw-logo">
+                                <img src="image/home-cp.png" alt="">
+                            </div>
+                            <div class="home-fw-title">产品</div>
+                            <div class="home-fw-xian"></div>
+                            <div class="home-fw-centent">1.专线、三方物流管理系统任君选择，灵活配置，一定符合你的所需。
+                                    2. 移动端助力，加快步入移动办公时代的步伐。</div>
+                        </li>
+                        <li>
+                            <div class="home-fw-logo">
+                                <img src="image/home-yunying.png" alt="">
+                            </div>
+                            <div class="home-fw-title">运营</div>
+                            <div class="home-fw-xian"></div>
+                            <div class="home-fw-centent">1. 按需定制，满足客户个性化、特殊化需求。
+                                    2.问题实时解答，客服服务7*24小时在线。</div>
+                        </li>
+                        <li>
+                            <div class="home-fw-logo">
+                                <img src="image/home-tuandui.png" alt="">
+                            </div>
+                            <div class="home-fw-title">团队</div>
+                            <div class="home-fw-xian"></div>
+                            <div class="home-fw-centent">1. 多年物流行业经验，深入了解物流现状
+                                    2 完成过多个大型物流相关的平台设计、开发、运营。</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="re-mid-content">
+                <div class="content-header ">
+                    <div class="content-title">
+                        下载客户端
+                    </div>
+                </div>
+                <div class="item-list">
+                    <ul class="item-home-xiazai">
+                        <li style="background: #4775FF;">
+                            <div class="home-xiazai-logo">
+                                <!-- <img src="image/anquanfw.png" alt=""> -->
+                            </div>
+                            <div class="home-xiazai-title" style="color: #ffffff;">专线物流系统</div>
+                        </li>
+                        <li>
+                            <div class="home-xiazai-logo">
+                                <!-- <img src="image/anquanfw.png" alt=""> -->
+                            </div>
+                            <div class="home-xiazai-title">三方物流系统</div>
+                        </li>
+                        <li>
+                            <div class="home-xiazai-weixin">
+                                <!-- <img src="image/anquanfw.png" alt=""> -->
+                            </div>
+                        </li>
+                        <li>
+                            <div class="home-xiazai-logo">
+                                <!-- <img src="image/anquanfw.png" alt=""> -->
+                            </div>
+                            <div class="home-xiazai-title">司机端微信小程序</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="banner-body">
+                <div class="banner-content ">
+                    <div class="banner-title">
+                            加入领华，实现您的精细化运营
+                            为收入提速，为管理增效！
+                    </div>  
+                    <div class="banner-botton">
+                            申请试用
+                    </div>  
+                </div>
+                <img src="image/bg01.png" alt="" srcset="">
+            </div>
+        </div>
+        <footer class="home-footer">
+            <div class="home-footer-inner">
+                <div class="footer-inner-content">
+                    <ul class="footer-ul">
+                        <li><a href="/zxb-webapp/v3/about">产品 </a></li>
+                        <li><a href="/zxb-webapp/v3/about#intro">专线TMS系统</a></li>
+                        <li><a href="/zxb-webapp/v3/about#culture">三方物流管理系统</a</li>
+                        <li><a href="/zxb-webapp/v3/about#honor">移动端应用</a></li>
+                    </ul>
+                    <ul class="footer-ul">
+                        <li>客户服务</li>
+                        <li>反馈建议：service@56linker.com</li>
+                        <li>工作时间：周一到周五 10：00-19：00</li>
+                    </ul>
+                    <ul class="footer-ul">
+                        <li>商务合作</li>
+                        <li>电话：李经理，18099392932</li>
+                        <li>邮箱：xxxxx@sina.com</li> 
+                    </ul>
+                    <ul class="footer-ul">
+                        <li>关于我们</li>
+                        <li>关于我们</li>
+                        <li>发展历程</li> 
+                    </ul>
+                    <ul class="footer-ul weixing right">
+                        <li>微信公众号</li>
+                        <li>
+                            <img src="image/weixin.png" alt="" srcset="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="ft-company">
+                        友情链接 :<span class="ft-company-lianjie">THX</span>    
+                    <span class="ft-company-lianjie">阿里妈妈MUX</span>   
+                    <span class="ft-company-lianjie">Alibaba国际站UED</span>
+                    <span class="ft-company-lianjie">Alibaba中文站UED</span>
+                    <span class="ft-company-lianjie">Design</span>
+                    <span class="ft-company-lianjie">UI中国</span>
+                </p>
+                <p class="ft-company">
+                    <span><a>杭州领华科技有限公司</a></span>
+                    <span><a>2016版权所有</a></span>
+                    <span><a>浙公网安备234234234234号 </a></span>
+                    <span><a>浙ICP备13424534号</a></span>
+                </p>
+            </div>
+        </footer>
+        <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js "></script>
+        <script src="jquery.hiSlider.js"></script>
+        <script src="index.js"></script>
+        <script>
+            //运行轮播图 可在jquery.hiSlider.js调整运动状态
+            $('.hiSlider').hiSlider();
+        function openDialog(){
+            document.getElementById('light').style.display='block';
+        }
+        function closeDialog(){
+            document.getElementById('light').style.display='none';
+        }
+    </script>
+        </script>
+    </body>
+</html>
